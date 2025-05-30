@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles/signup.css" />
+</head>
+<body>
+  <div class="header">
+    <!-- ✅ Fixed img tag (self-closing properly) -->
+    <a href="index.html">
+      <img src="images/Free-Logo-_from-www.logo.im_-_1_.svg" alt="Logo" />
+    </a>
+  </div>
+
+  <div class="signup-container">
+    <form id="signUpForm" class="form-box">
+      <h2 class="form-title">Create Account</h2>
+
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" class="form-input" placeholder="Enter your username" required />
+
+      <label for="signup-email" class="form-label">Email</label>
+      <input type="email" id="signup-email" class="form-input" placeholder="Enter your email" required />
+
+      <label for="signup-password" class="form-label">Password</label>
+      <input type="password" id="signup-password" class="form-input" placeholder="Enter your password" required />
+
+      <button type="submit" class="submit-btn">Sign Up</button>
+      <p>Already have an Account? <a href="signIn.html">Sign In</a></p>
+    </form>
+  </div>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <!-- ✅ Your script (inside correct <script> tag) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // ✅ Your Firebase config (replace with your actual values)
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+
+      // Allowed emails
+      const allowedEmails = [
+        "prabalraizada@gmail.com",
+        "satvikchandelnlg2002@gmail.com",
+        "tusharloveigi@gmail.com"
+      ];
+
+      // Sign-up form logic
+      const form = document.getElementById("signUpForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("signup-email").value.trim();
+        const password = document.getElementById("signup-password").value.trim();
+
+        if (!allowedEmails.includes(email)) {
+          alert("This email is not authorized to sign up.");
+          return;
+        }
+
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Signed up successfully!");
+            window.location.href = "index.html";
+          })
+          .catch((error) => {
+            alert("Error: " + error.message);
+          });
+      });
+
+      // Optional: log auth state
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("Logged in as:", user.email);
+        } else {
+          console.log("No user logged in.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

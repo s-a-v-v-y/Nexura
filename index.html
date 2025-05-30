@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+    <div class="navbar">
+        <div class="navleft">
+            <div class="home">
+                <a href="">Home</a>
+            </div>
+            <div class="search">
+                <img src="images/search-svgrepo-com.svg" alt="">
+                <input type="text" placeholder="search" id="searchBox">
+            </div>
+            <div class="about"><a href="#about">About</a></div>
+        </div>
+        <div class="Logo"><img src="images/Free-Logo-_from-www.logo.im_-_1_.svg" alt=""></div>
+        <div class="navright">
+            <div class="enter">
+            <div class="btn1"><button><a href="signIn.html">SignIn</a></button></div>
+            <div class="btn2"><button><a href="signUp.html">SignUp</a></button></div>
+
+            </div>
+            <div class="ham" id="menu">&#9776;
+            </div>
+            <div class="cart"><a href="cart.html"><img src="images/icons8-cart-50.png" alt=""></a></div>
+            <div class="contact"><a href="#contact">Contact</a></div>
+        </div>
+    </div>
+    <div class="bg-cr"><img src="images/marcus-wallis-mUtQXjjLPbw-unsplash.jpg" alt=""></div>
+   </div>
+   <div class="quote-box">
+    <h1>BUILT FOR ATHLETES, PRICED FOR EVERYONE</h1>
+   </div>
+   <div class="laid-text">SHOP EXCLUSIVELY WITH NEXURA</div>
+   <div class="sports-logo-container">
+    <div class="sport-logo crick-logo"><a href="#crick"><img src="images/crick-logo.jpg" alt=""></a></div>
+    <div class="sport-logo foot-logo"><a href="#footb"><img src="images/foor-logo.avif" alt=""></a></div>
+    <div class="sport-logo cycle-logo"><a href="#cyc"><img src="images/cycle-logo.jpg" alt=""></a></div>
+    <div class="sport-logo teni-logo"><a href="#ten"><img src="images/teni-logo.avif" alt=""></a></div>
+    <div class="sport-logo badm-logo"><a href="#badm"><img src="images/badm-logo.jpg" alt=""></a></div>
+    <div class="sport-logo hock-logo"><a href="#hock"><img src="images/hock-logo.jpg" alt=""></a></div>
+   </div>
+   <div class="time" id="time"></div>
+   <div class="all-product">
+    <h1 id="crick">CRICKET</h1>
+    <div class="products-row">
+    
+    <!-- Product c1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/bat.webp" alt="Kashmiri Willow Bat" />
+        <h3>Kashmiri Willow Bat</h3>
+        <div class="price">₹4500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product c2 -->
+    <div class="product-card">
+        <img src="images/crick-ball.webp" alt="Kookaburra Ball" />
+        <h3>Kookabura Ball</h3>
+        <div class="price">₹900</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product c3 -->
+    <div class="product-card">
+        <img src="images/wickets.jpg" alt="Wickets" />
+        <h3>Wickets</h3>
+        <div class="price">₹1600</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product c4 -->
+    <div class="product-card">
+        <img src="images/Gloves.jpg" alt="Gloves" />
+        <h3>Gloves</h3>
+        <div class="price">₹1000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product c5 -->
+    <div class="product-card">
+        <img src="images/Kit.jpeg" alt="Cricket kit" />
+        <h3>Cricket kit</h3>
+        <div class="price">₹12000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    <h1 id="footb">FOOTBALL</h1>
+    <div class="products-row">
+    
+    <!-- Product f1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/foot-ball.avif" alt="Football" />
+        <h3>Football</h3>
+        <div class="price">₹5000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product f2 -->
+    <div class="product-card">
+        <img src="images/grip gloves.webp" alt="Goal gloves" />
+        <h3>Gloves</h3>
+        <div class="price">₹1400</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product f3 -->
+    <div class="product-card">
+        <img src="images/studs.jpg" alt="Shoes" />
+        <h3>Shoes</h3>
+        <div class="price">₹7000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product f4 -->
+    <div class="product-card">
+        <img src="images/jerseys.avif" alt="jersey" />
+        <h3>Jersey</h3>
+        <div class="price">₹2000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product f5 -->
+    <div class="product-card">
+        <img src="images/shin guards.jpg" alt="Shin-Guard" />
+        <h3>Shin-Guard</h3>
+        <div class="price">₹12000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    <h1 id="cyc">Cycling</h1>
+    <div class="products-row">
+    
+    <!-- Product cy1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/Helmet.jpg" alt="Cycle Helmet" />
+        <h3>Bike Helmet</h3>
+        <div class="price">₹4500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product cy2 -->
+    <div class="product-card">
+        <img src="images/cycling gloves.jpg" alt="Cycling Gloves" />
+        <h3>Bike Gloves</h3>
+        <div class="price">₹2500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product cy3 -->
+    <div class="product-card">
+        <img src="images/bottle and cage set.jpg" alt="Bottle and Cage Set" />
+        <h3>Bottle and Cage set</h3>
+        <div class="price">₹2200</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product cy4 -->
+    <div class="product-card">
+        <img src="images/front and rear lights.jpg" alt="Front and Rear Lights" />
+        <h3>Front and Rear Lights</h3>
+        <div class="price">₹1500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product cy5 -->
+    <div class="product-card">
+        <img src="images/bike lock.jpg" alt="Bike Lock" />
+        <h3>Bike lock</h3>
+        <div class="price">₹800</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    <h1 id="ten">TENNIS</h1>
+    <div class="products-row">
+    
+    <!-- Product t1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/Racket.jpg" alt="Racket" />
+        <h3>Racket</h3>
+        <div class="price">₹5000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product t2 -->
+    <div class="product-card">
+        <img src="images/sweatbands.webp" alt="Sweatbands" />
+        <h3>Apparell and Sweatbands</h3>
+        <div class="price">₹1200</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product t3 -->
+    <div class="product-card">
+        <img src="images/t-shoes.jpg" alt="shoes" />
+        <h3>Shoes</h3>
+        <div class="price">₹7000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product t4 -->
+    <div class="product-card">
+        <img src="images/tbag.webp" alt="Bag" />
+        <h3>Bag</h3>
+        <div class="price">₹4000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product t5 -->
+    <div class="product-card">
+        <img src="images/tballs.avif" alt="Balls" />
+        <h3>Balls</h3>
+        <div class="price">₹500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    <h1 id="badm">BADMINTON</h1>
+    <div class="products-row">
+    
+    <!-- Product  b1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/B-racket.jpg.crdownload" alt="Racket" />
+        <h3>Racket</h3>
+        <div class="price">₹5000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product b2 -->
+    <div class="product-card">
+        <img src="images/cocks.jpg" alt="Shuttlecocks" />
+        <h3>Shuttlecocks</h3>
+        <div class="price">₹1000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product b3 -->
+    <div class="product-card">
+        <img src="images/b-shoes.jpg" alt="Shoes" />
+        <h3>Shoes</h3>
+        <div class="price">₹6500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product b4 -->
+    <div class="product-card">
+        <img src="images/b-bag.jpg" alt="Bag" />
+        <h3>Bag</h3>
+        <div class="price">₹4500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product b5 -->
+    <div class="product-card">
+        <img src="images/grip tapes.jpg" alt="Grip Tapes" />
+        <h3>Grip Tapes</h3>
+        <div class="price">₹500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    <h1 id="hock">HOCKEY</h1>
+    <div class="products-row">
+    
+    <!-- Product h1 -->
+    <div class="product-card" id="cricket-card">
+        <img src="images/hstick.avif" alt="Stick" />
+        <h3>Stick</h3>
+        <div class="price">₹4500</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(0)">-</button>
+        <span id="qty-0">0</span>
+        <button onclick="increaseQty(0)">+</button>
+        </div>
+    </div>
+
+    <!-- Product h2 -->
+    <div class="product-card">
+        <img src="images/hshoes.jpg" alt="Shoes" />
+        <h3>Shoes</h3>
+        <div class="price">₹5000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(1)">-</button>
+        <span id="qty-1">0</span>
+        <button onclick="increaseQty(1)">+</button>
+        </div>
+    </div>
+
+    <!-- Product h3 -->
+    <div class="product-card">
+        <img src="images/goalie.jpg" alt="Goalie" />
+        <h3>Goalie Equipments</h3>
+        <div class="price">₹10000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(2)">-</button>
+        <span id="qty-2">0</span>
+        <button onclick="increaseQty(2)">+</button>
+        </div>
+    </div>
+
+    <!-- Product h4 -->
+    <div class="product-card">
+        <img src="images/hbags.jpg" alt="Bag" />
+        <h3>Bag</h3>
+        <div class="price">₹7000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(3)">-</button>
+        <span id="qty-3">0</span>
+        <button onclick="increaseQty(3)">+</button>
+        </div>
+    </div>
+
+    <!-- Product h5 -->
+    <div class="product-card">
+        <img src="images/protective gear.jpg" alt="Protective Gear" />
+        <h3>Protective Gears</h3>
+        <div class="price">₹12000</div>
+        <div class="quantity-controls">
+        <button onclick="decreaseQty(4)">-</button>
+        <span id="qty-4">0</span>
+        <button onclick="increaseQty(4)">+</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+    <div class="foot">
+        <div class="address">
+            <h1>Address</h1>
+            <p>13, Dattowal Tehsil Nalagarh , District Solan (174101 )HP</p>
+        </div>
+        <div class="About" id="about">
+            <h1>About Us</h1>
+            <p>Nexura Sports is dedicated to empowering athletes at every level with cutting-edge gear, innovative design, and a passion for performance. Whether you're on the field or in the gym, we're here to help you push your limits</p>
+        </div>
+        <div class="contact" id="contact">
+            <h1>Contact Us</h1>
+            <p>nexura1718@gmail.com, +91 - 7876847428</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+
+    </div>    
+</footer>
+   <button id="backToTop" title="Go to top">↑</button>
+   <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+
+   <script src="script/script.js"></script>
+
+</body>
+</html>
